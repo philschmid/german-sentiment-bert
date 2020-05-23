@@ -42,18 +42,19 @@ package:
     - test/**
     - __pycache__/**
     - .pytest_cache/**
+    - model/pytorch_model.bin
     - raw/**
     - .vscode/**
     - .ipynb_checkpoints/**
 
 functions:
-  detect_damage:
-    handler: handler.detect_damage
+  predict_sentiment:
+    handler: handler.predict_sentiment
     memorySize: 3008
     timeout: 60
     events:
       - http:
-          path: detect
+          path: sentiment
           method: post
           cors: true
 

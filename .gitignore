@@ -102,3 +102,7 @@ dist/**/*
 
 # ignore yarn.lock
 yarn.lock
+node_modules
+.serverless
+cache
+.requirements.zip
